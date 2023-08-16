@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "22a50b6b-18a7-479e-a126-10cc4127c7dc",
+		"name": "CommonModules -- Email Module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25986382"
+	},
+	"item": [
+		{
+			"name": "Email Module",
+			"item": [
+				{
+					"name": "send Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\":[\"harshvaishnav@techtic.agency\"],\r\n    \"cc\":[\"anirudh@techtic.agency\"],\r\n    \"subject\":\"This is testing email module\",\r\n    \"html\":\"<h2>Testing email module</h2>\",\r\n    \"isBcc\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/email/sendEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"email",
+								"sendEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send Email With Attachment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "to",
+									"value": "[\"harshvaishnav@techtic.agency\"]",
+									"type": "text"
+								},
+								{
+									"key": "cc",
+									"value": "[\"anirudh@techtic.agency\"]",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "\"This is email testing with attachments\"",
+									"type": "text"
+								},
+								{
+									"key": "html",
+									"value": "<h2>Testing email testing with attachments</h2>",
+									"type": "text"
+								},
+								{
+									"key": "isBcc",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "attachments",
+									"type": "file",
+									"src": "/C:/Users/Admin/Downloads/db_backup--Thursday_August_10th_2023_1_16_35_pm.sql"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/email/sendEmailWithAttachment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"email",
+								"sendEmailWithAttachment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2 @@
+0> send email containing subject , html.
+1> send email containing subject , html , attachments.

@@ -72,7 +72,6 @@ export class EmailService {
   }
 
 
-  
   async sendEmailWithAttachment(data: {
     to: string[];
     isBcc: boolean;

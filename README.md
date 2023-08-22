@@ -1,8 +1,8 @@
-# NestJS & MongoDB : Auth module ( common functionalities )
+# NestJS : Email module ( common functionalities )
 
 ## About
 ```bash
-This is email module project built in NestJS as backend and MongoDB as database.
+This is email module project built in NestJS as backend.
 In this project, below functionalities exists.
     a> Send plain email
     b> Send email with attachments
